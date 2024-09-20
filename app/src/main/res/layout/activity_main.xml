@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:paddingStart="50dp"
+        android:text="Veuillez générer votre Qr Code"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_welcome"
+        android:layout_marginTop="20dp"
+        android:hint="Nom"
+        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:textColor="@color/black" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_firstName"
+        android:layout_marginTop="20dp"
+        android:hint="Prénom"
+        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_select_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_lastName"
+        android:layout_marginTop="20dp"
+        android:text="SELECTIONNER UNE IMAGE"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/img_preview_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/btn_select_image"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_generate_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_preview_image"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#00308F"
+        android:text="GENERER LE QR CODE"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/img_preview_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/btn_generate_qr_code"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
